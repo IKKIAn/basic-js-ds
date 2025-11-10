@@ -19,7 +19,7 @@ class Queue {
   }
 
   dequeue() {
-    if (!this.head) return; // возвращаем undefined, а не null
+    if (!this.head) return; 
     const value = this.head.value;
     this.head = this.head.next;
     if (!this.head) this.tail = null;
@@ -27,7 +27,6 @@ class Queue {
   }
 
   getUnderlyingList() {
-    // Преобразуем список в обычный объект (без класса)
     function toPlainObject(node) {
       if (!node) return null;
       return {
